@@ -1,6 +1,10 @@
 name:  Basic Workflow 
 
-on:  push 
+on:  
+  push :
+    branches: 
+      - main 
+  workflow_dispatch:
   
 
 jobs: 
@@ -18,6 +22,7 @@ jobs:
     steps:
       - name: Echo Bye Step 1
         run: echo "Bye, World!"
+             exit 0
       - name: Echo Bye Step 2
         run: echo "Bye, greeting!"
       - name: Echo Bye Step 3
